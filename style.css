@@ -1,27 +1,40 @@
-body { font-family: sans-serif; margin: 0; background: #f4f7f9; }
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; }
 
+/* Шапка */
 #main-header {
     position: fixed; width: 100%; padding: 20px 50px;
     display: flex; justify-content: space-between; align-items: center;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Тот самый эффект стекла */
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     z-index: 1000;
 }
-
-/* Сжатие при скролле (класс добавляется JS) */
 #main-header.scrolled { padding: 10px 50px; background: rgba(255, 255, 255, 0.95); }
-
 .logo { font-weight: bold; color: #003366; font-size: 24px; }
-
 nav ul { display: flex; list-style: none; gap: 30px; }
-nav a { text-decoration: none; color: #003366; }
+nav a { text-decoration: none; color: #003366; font-weight: 600; }
 
-/* Таблица для B2B */
+/* Геройский блок */
+.hero {
+    height: 80vh; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center;
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white; text-align: center; padding: 20px;
+}
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.btn {
+    background: #ffcc00; color: #003366; padding: 15px 30px;
+    text-decoration: none; font-weight: bold; border-radius: 5px;
+    margin-top: 20px;
+}
+.hero-icons { display: flex; gap: 40px; margin-top: 40px; }
+
+/* Таблица */
+.specs-section { padding: 50px 20px; text-align: center; }
 .specs-table {
-    width: 80%; margin: 20px auto; border-collapse: collapse;
+    width: 90%; max-width: 900px; margin: 20px auto; border-collapse: collapse;
     background: white; border-radius: 10px; overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .specs-table th { background: #003366; color: white; padding: 15px; }
-.specs-table td { padding: 15px; border-bottom: 1px solid #ddd; text-align: center; }
+.specs-table td { padding: 15px; border-bottom: 1px solid #ddd; }

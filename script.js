@@ -7,8 +7,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Бургер меню (основа)
 const burger = document.getElementById('burger');
 burger.addEventListener('click', () => {
-    document.getElementById('nav-menu').classList.toggle('active');
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
 });

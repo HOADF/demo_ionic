@@ -1,14 +1,13 @@
 window.addEventListener('scroll', () => {
     const header = document.getElementById('main-header');
     if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
     } else {
-        header.classList.remove('scrolled');
+        header.style.background = 'rgba(255, 255, 255, 0.7)';
     }
 });
 
 const burger = document.getElementById('burger');
 burger.addEventListener('click', () => {
-    const nav = document.getElementById('nav-menu');
-    nav.classList.toggle('active');
+    document.getElementById('nav-menu').classList.toggle('active');
 });

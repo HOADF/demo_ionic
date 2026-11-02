@@ -8,6 +8,17 @@ window.addEventListener('scroll', () => {
 });
 
 const burger = document.getElementById('burger');
+const navMenu = document.getElementById('nav-menu');
+
 burger.addEventListener('click', () => {
-    document.getElementById('nav-menu').classList.toggle('active');
+    burger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// закрывать меню после перехода по ссылке
+navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
